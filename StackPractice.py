@@ -22,6 +22,8 @@ class Stack:
             return self.stackArray[self.topOfStack]
         else:
             return "Stack Empty"
+    def getSize(self):
+        return self.topOfStack+1
 
 testStack = Stack()
 testStack.push(5)
