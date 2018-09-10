@@ -9,8 +9,8 @@ class Queue:
         if(self.queueSize == self.MAX_SIZE):
             print("Queue is full")
         else:
-            self.rear += 1
             self.queueArray[self.rear] = val
+            self.rear += 1
             self.queueSize += 1
             if(self.rear == self.MAX_SIZE):
                 self.rear = 0
@@ -19,8 +19,8 @@ class Queue:
         if(self.queueSize == 0):
             print("Queue is empty")
         else:
-            self.front += 1
             val = self.queueArray[self.front]
+            self.front += 1
             self.queueSize -= 1
             if(self.front == self.MAX_SIZE):
                 self.front = 0
@@ -34,17 +34,5 @@ class Queue:
 
     def size(self):
         return self.queueSize
-
-q1 = Queue()
-q1.enqueue('f')
-q1.enqueue('s')
-q1.enqueue('c')
-q1.enqueue('w')
-
-print(q1.dequeue())
-print(q1.dequeue())
-print(q1.dequeue())
-print(q1.dequeue())
-
 
     
